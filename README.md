@@ -220,9 +220,11 @@ it can works on WSL and Windows through Windows Terminal, or on iOS & iPadOS thr
 | ac | select | 选择整个类 | treesitter-textobjects |
 | ic | select | 只选择类内部实现 | treesitter-textobjects |
 | \<C-n> | normal | 开关文件浏览器 | nvim-tree |
+| \<C-v> | nvim-tree action | vsplit打开 | nvim-tree |
+| \<C-x> | nvim-tree action | split打开 | nvim-tree |
+| \<Tab> | nvim-tree action | preview | nvim-tree |
+| R | nvim-tree action | refresh  | nvim-tree |
 | h | nvim-tree action | 关闭文件夹 | nvim-tree |
-| v | nvim-tree action | vsplit打开 | nvim-tree |
-| x | nvim-tree action | split打开 | nvim-tree |
 | a | nvim-tree action | 创建 | nvim-tree |
 | d | nvim-tree action | 删除 | nvim-tree |
 | r | nvim-tree action | 重命名 | nvim-tree |
