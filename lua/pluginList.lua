@@ -181,19 +181,7 @@ local pluginList = {
 				mappings = {
 		    		custom_only = false,
 		    		list = {
-						{key = "<C-v>",cb = tree_cb "vsplit"},
-						{key = "<C-x>",cb = tree_cb "split"},
-						{key = "<Tab>",cb = tree_cb "preview"},
-						{key = "R",cb = tree_cb "refresh"},
-						{key = "h",cb = tree_cb "close_node"},
-						{key = "a",cb = tree_cb "create"},
-						{key = "d",cb = tree_cb "remove"},
-						{key = "r",cb = tree_cb "rename"},
-						{key = "x",cb = tree_cb "cur"},
-						{key = "c",cb = tree_cb "copy"},
-						{key = "p",cb = tree_cb "paste"},
-						{key = "y",cb = tree_cb "copy_name"},
-						{key = "q",cb = tree_cb "close"},
+						{key = "v",cb = tree_cb "vsplit"}
 		    		}
 				}
 	    	},
