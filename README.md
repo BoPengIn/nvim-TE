@@ -245,7 +245,7 @@ it can works on WSL and Windows through Windows Terminal, or on iOS & iPadOS thr
 | \<leader>xr | normal | 刷新诊断列表 | bufferline |
 | \<leader>fb | normal | 列出当前neovim实例中打开的缓冲区 | telescope |
 | \<leader>ff | normal | 列出当前工作目录中的文件 | telescope |
-| \<leader>fg | normal | 在当前工作目录中搜索字符串jqqjk | telescope |
+| \<leader>fg | normal | 在当前工作目录中搜索字符串 | telescope |
 | \<leader>fh | normal | 列出可用的帮助标签 | telescope |
 | \<C-p> | nvim-cmp action | 选择上一个 | nvim-cmp |
 | \<C-n> | nvim-cmp action | 选择下一个 | nvim-cmp |
