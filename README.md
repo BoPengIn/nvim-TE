@@ -193,6 +193,16 @@ it can works on WSL and Windows through Windows Terminal, or on iOS & iPadOS thr
 
 |    按键    |         模式         |          功能          | 来源插件  |
 | :--------: | :------------------: | :--------------------: | :-------: |
+| \<A-h>  |        insert        | 插入模式左移光标 | neovim |
+| \<A-l> |        insert        | 插入模式右移光标 | neovim |
+| \<A-k> |        insert        | 插入模式上移一行 | neovim |
+| \<A-j> |        insert        | 插入模式下移一行 | neovim |
+| \<A-d> |        insert        |           插入模式删除           | neovim |
+| \<C-u> |        insert        | 插入模式向上移动半页 | neovim |
+| \<C-d> |        insert        | 插入模式向下移动半页 | neovim |
+| \<C-s> |        normal,insert        | 保存文件 | neovim |
+| \<C-h> |        normal,insert        | 插入模式移动光标至行首 | neovim |
+| \<C-l> |        normal,insert        | 插入模式移动光标至行尾 | neovim |
 | \<leader>h  |        normal        | c/c++头文件源文件切换  | lspconfig |
 |     gd     |        normal        |        转到定义        | lspconfig |
 |     gs     |        normal        |        转到声名        | lspconfig |
@@ -251,11 +261,11 @@ it can works on WSL and Windows through Windows Terminal, or on iOS & iPadOS thr
 | \<C-n> | nvim-cmp action | 选择下一个 | nvim-cmp |
 | \<C-b> | nvim-cmp action | 前上滚动文档 | nvim-cmp |
 | \<C-f> | nvim-cmp action | 前后下动文档 | nvim-cmp |
-| \<C-k> | nvim-cmp action | 完成 | nvim-cmp |
+| \<C-y> | nvim-cmp action | 完成 | nvim-cmp |
 | \<C-e> | nvim-cmp action | 关闭 | nvim-cmp |
 | \<CR> | nvim-cmp action | 确认 | nvim-cmp |
-| \<Tab> | nvim-cmp action | 跳下一个 | nvim-cmp |
-| \<S-Tab> | nvim-cmp action | 跳上一个 | nvim-cmp |
+| \<C-j> | nvim-cmp action | 跳下一个 | nvim-cmp |
+| \<C-k> | nvim-cmp action | 跳上一个 | nvim-cmp |
 | m | normal,visual | 代码注释 | nvim-comment |
 | \<A-m> | insert | 代码注释 | nvim-comment |
 | jk | insert | 退出插入模式 | better-escape |

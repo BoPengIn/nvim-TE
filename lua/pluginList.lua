@@ -320,13 +320,13 @@ local pluginList = {
 					["<C-n>"] = cmp.mapping.select_next_item(),
 					["<C-b>"] = cmp.mapping.scroll_docs(-4),
 					["<C-f>"] = cmp.mapping.scroll_docs(4),
-					["<C-k>"] = cmp.mapping.complete(),
+					["<C-y>"] = cmp.mapping.complete(),
 					["<C-e>"] = cmp.mapping.close(),
 					["<CR>"] = cmp.mapping.confirm {
 						behavior = cmp.ConfirmBehavior.Replace,
 						select = true,
 					},
-					["<Tab>"] = cmp.mapping(function(fallback)
+					["<C-j>"] = cmp.mapping(function(fallback)
 						if cmp.visible() then
 							cmp.select_next_item()
 						elseif require("luasnip").expand_or_jumpable() then
@@ -337,7 +337,7 @@ local pluginList = {
 							fallback()
 						end
 					end,{"i","s"}),
-					["<S-Tab>"] = cmp.mapping(function(fallback)
+					["<C-k>"] = cmp.mapping(function(fallback)
 						if cmp.visible() then
 							cmp.select_prev_item()
 						elseif require("luasnip").jumpable(-1) then
