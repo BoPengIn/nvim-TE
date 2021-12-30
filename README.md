@@ -7,9 +7,9 @@ it can works on WSL and Windows through Windows Terminal, or on iOS & iPadOS thr
 * [平台支持](#平台支持) 
 * [安装](#安装)
   - [终端设置](#终端设置)
-  - [安装`neovim`](#安装`neovim`)
+  - [安装`neovim`](#安装neovim)
   - [安装依赖](#安装依赖)
-  - [安装`nvim-TE`](#安装`nvim-TE`)
+  - [安装`nvim-TE`](#安装nvim-TE)
 * [插件快捷键](#插件快捷键)
 * [注意事项](#注意事项)
 * [插件说明](#插件说明)
@@ -179,7 +179,7 @@ it can works on WSL and Windows through Windows Terminal, or on iOS & iPadOS thr
      cd ../..
      ./3rd/luamake/luamake rebuild
      ```
-### 安装`nvim-TE`
+### 安装nvim-TE
   * **`Windows`**
     ```
     git clone https://github.com/PengBo-cn/nvim-TE.git (system disk):\Users\(you user name)\AppData\Local\nvim

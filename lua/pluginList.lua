@@ -32,7 +32,7 @@ local pluginList = {
 		vim.o.updatetime = 250
 		vim.api.nvim_command "autocmd CursorHold * Lspsaga show_line_diagnostics" 
 	end},
-	{"nvim-treesitter/nvim-treesitter",run = ":TSUpdate",branch = "0.5-compat",config = function()
+	{"nvim-treesitter/nvim-treesitter",run = ":TSUpdate",config = function()
 		require("nvim-treesitter.configs").setup {
 	    	ensure_installed = require("languageConfig").list(),
 	    	textobjects = {
@@ -75,7 +75,7 @@ local pluginList = {
 	    	},
 		}
     end},
-   {"nvim-treesitter/nvim-treesitter-textobjects",after = "nvim-treesitter",branch = "0.5-compat"},
+   {"nvim-treesitter/nvim-treesitter-textobjects",after = "nvim-treesitter"},
     --{"romgrk/nvim-treesitter-context",after = "nvim-treesitter"},
     {"andymass/vim-matchup",after = "nvim-treesitter"},
     {"kyazdani42/nvim-web-devicons",config = function()
