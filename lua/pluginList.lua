@@ -27,10 +27,15 @@ local pluginList = {
 		})
 	end},
     {"ray-x/lsp_signature.nvim", after = "nvim-lspconfig"},
-	{"glepnir/lspsaga.nvim",after = "nvim-lspconfig",config = function ()
+	-- {"glepnir/lspsaga.nvim",after = "nvim-lspconfig",config = function ()
+	-- 	require("lspsaga").init_lsp_saga()
+	-- 	vim.o.updatetime = 250
+	-- 	vim.api.nvim_command "autocmd CursorHold * Lspsaga show_line_diagnostics" 
+	-- end},
+	{"tami5/lspsaga.nvim",after = "nvim-lspconfig",branch = 'nvim6.0', config = function ()
 		require("lspsaga").init_lsp_saga()
-		vim.o.updatetime = 250
-		vim.api.nvim_command "autocmd CursorHold * Lspsaga show_line_diagnostics" 
+		--vim.o.updatetime = 500
+		--vim.api.nvim_command "autocmd CursorHold * Lspsaga show_line_diagnostics" 
 	end},
 	{"nvim-treesitter/nvim-treesitter",run = ":TSUpdate",config = function()
 		require("nvim-treesitter.configs").setup {

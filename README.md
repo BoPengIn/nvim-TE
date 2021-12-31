@@ -116,7 +116,7 @@ it can works on WSL and Windows through Windows Terminal, or on iOS & iPadOS thr
        
     git clone --depth=1 --recursive https://github.com/MaskRay/ccls
     cd ccls
-    cmake -H. -BRelease -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=clang-cl -DCMAKE_PREFIX_PATH="llvm-project/Release"
+    cmake -H. -BRelease -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=cl -DCMAKE_PREFIX_PATH="llvm-project/Release"
     ninja -C Release
     ```
     
@@ -299,9 +299,13 @@ local proxyMirror = "https://mirror.ghproxy.com/"
 >   * 功能：显示函数信息的浮动窗口
 >   * 地址：[`ray-x/lsp_signature.nvim`](https://github.com/ray-x/lsp_signature.nvim)
 >   * 需要：`nvim-lspconfig`
+> - ~~**`lspsaga.nvim`**~~
+>   * ~~功能：一个轻量级、高性能的的`LSP UI`插件~~
+>   * ~~地址：[`glepnir/lspsaga.nvim`](https://github.com/glepnir/lspsaga.nvim)~~
+>   * ~~需要：`nvim-lspconfig`~~
 > - **`lspsaga.nvim`**
 >   * 功能：一个轻量级、高性能的的`LSP UI`插件
->   * 地址：[`glepnir/lspsaga.nvim`](https://github.com/glepnir/lspsaga.nvim)
+>   * 地址：[`tami5/lspsaga.nvim`](https://github.com/tami5/lspsaga.nvim)
 >   * 需要：`nvim-lspconfig`
 >  - **`nvim-treesitter`**
 >    * 功能：语法高亮插件

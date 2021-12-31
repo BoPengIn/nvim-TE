@@ -36,6 +36,7 @@ local normalKeymap = {	-- normal mode
 	["<C-t>"] = "<cmd>lua require('lspsaga.floaterm').open_float_terminal()<CR>",
 	["<leader>pd"] = "<cmd>lua require'lspsaga.provider'.preview_definition()<CR>",
 	["<leader>rf"] = "<cmd>lua require('lspsaga.rename').rename()<CR>",
+	--nvim-tree
 	["<C-n>"] = "<cmd>NvimTreeToggle<CR>",
 	--bufferline
 	["[b"] = "<cmd>BufferLineCycleNext<CR>",
