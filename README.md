@@ -71,9 +71,9 @@ it can works on WSL and Windows through Windows Terminal, or on iOS & iPadOS thr
    ```
 3. 下载并安装`neovim`
    ```
-   sudo wget https://github.com/neovim/neovim/archive/refs/tags/v0.5.1.tar.gz
-   tar -xzvf v0.5.1.tar.gz
-   cd neovim-0.5.1 
+   sudo wget https://github.com/neovim/neovim/archive/refs/tags/v0.6.1.tar.gz
+   tar -xzvf v0.6.1.tar.gz
+   cd neovim-0.6.1 
    make CMAKE_BUILD_TYPE=Release
    sudo make install
    ```
