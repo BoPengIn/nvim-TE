@@ -16,6 +16,7 @@
 --  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ------------------------------------------------------------------------------
 
+local proxyMirror  = require "proxyMirror"
 local pluginList = require "pluginList"
 
 local _M = {}
@@ -24,7 +25,7 @@ local fn = vim.fn
 local installPath = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 local packageRoot = fn.stdpath('data')..'/site/pack'
 
-function _M.setup(proxyMirror)
+function _M.setup()
 
 	vim.g.loaded_matchit = 1
 	vim.g.loaded_matchparen = 1
@@ -33,9 +34,9 @@ function _M.setup(proxyMirror)
 	local packerUrl = "https://github.com/wbthomason/packer.nvim"
 	local defaultUrlFormat = "https://github.com/%s.git"
 
-	if proxyMirror then
-		packerUrl = proxyMirror .. packerUrl
-		defaultUrlFormat = proxyMirror .. defaultUrlFormat
+	if proxyMirror.proxyURL then
+		packerUrl = proxyMirror.proxyURL .. packerUrl
+		defaultUrlFormat = proxyMirror.proxyURL .. defaultUrlFormat
 	end
 
     local packerBootstrap = nil
@@ -45,36 +46,37 @@ function _M.setup(proxyMirror)
 	end
 
     local packer = require('packer')
-
-    packer.init ({
-		package_root = packageRoot,
-		git = {
-			clone_timeout = 300,
-	    	default_url_format =  defaultUrlFormat
-		},
-		display = {
-	    	open_fn = function()
-				return require("packer.util").float({border = "single"})
-	    	end
-		},
-		auto_clean = true,
-		compile_on_sync = true,
-    })
-
-    packer.startup(function(use)
-
-		use 'wbthomason/packer.nvim'
-
-		if pluginList then
-	    	for _,plugin in ipairs(pluginList) do
-				use(plugin)
-	    	end
-		end
-
-		if packerBootstrap then
-	    	require('packer').sync()
-		end
-    end)
+	if packer then
+		packer.init ({
+			package_root = packageRoot,
+			git = {
+				clone_timeout = 300,
+				default_url_format =  defaultUrlFormat
+			},
+			display = {
+				open_fn = function()
+					return require("packer.util").float({border = "single"})
+				end
+			},
+			auto_clean = true,
+			compile_on_sync = true,
+		})
+	
+		packer.startup(function(use)
+	
+			use 'wbthomason/packer.nvim'
+	
+			if pluginList then
+				for _,plugin in ipairs(pluginList) do
+					use(plugin)
+				end
+			end
+	
+			if packerBootstrap then
+				require('packer').sync()
+			end
+		end)
+	end
 end
 
 return _M

@@ -182,12 +182,12 @@ it can works on WSL and Windows through Windows Terminal, or on iOS & iPadOS thr
 ### 安装nvim-TE
   * **`Windows`**
     ```
-    git clone https://github.com/PengBo-cn/nvim-TE.git (system disk):\Users\(you user name)\AppData\Local\nvim
+    git clone https://github.com/iPengBo/nvim-TE.git (system disk):\Users\(you user name)\AppData\Local\nvim
     ```
   * **`Ubuntu`**
     
     ```
-    git clone https://github.com/PengBo-cn/nvim-TE.git ~/.config/nvim
+    git clone https://github.com/iPengBo/nvim-TE.git ~/.config/nvim
     ```
 ## 插件快捷键
 
@@ -275,15 +275,15 @@ it can works on WSL and Windows through Windows Terminal, or on iOS & iPadOS thr
 ### 中国区域用户无法访问`GitHub`或是访问不稳定问题
 1. 使用代理进行访问，如下
 ```
-git clone https://github.com/PengBo-cn/nvim-TE.git
+git clone https://github.com/iPengBo/nvim-TE.git
 ```
 修改为
 ```
-git clone https://mirror.ghproxy.com/https://github.com/PengBo-cn/nvim-TE.git
+git clone https://mirror.ghproxy.com/https://github.com/iPengBo/nvim-TE.git
 ```
 2. 将`git clone`到本地的`nvim-TE`中的`init.lua`，解开以下注释代码
 ```
-local proxyMirror = "https://mirror.ghproxy.com/"
+proxyMirror.proxyURL = "https://mirror.ghproxy.com/"
 ```
 
 ## 插件说明
@@ -344,7 +344,7 @@ local proxyMirror = "https://mirror.ghproxy.com/"
 > - **`telescope.nvim`**
 >   * 功能：文件模糊搜索
 >   * 地址：[`nvim-telescope/telescope.nvim`](https://github.com/nvim-telescope/telescope.nvim)
->   * 需要：[`nvim-lua/plenary.nvim`](https://github.com/nvim-lua/plenary.nvi),[`nvim-telescope/telescope-fzy-native.nvim`](https://github.com/nvim-telescope/telescope-fzy-native.nvim)
+>   * 需要：[`nvim-lua/plenary.nvim`](https://github.com/nvim-lua/plenary.nvim),[`nvim-telescope/telescope-fzy-native.nvim`](https://github.com/nvim-telescope/telescope-fzy-native.nvim)
 >   * 依赖库：`ripgrep`,`fd`
 > - **`LuaSnip`**
 >   * 功能：代码段引擎
@@ -356,7 +356,7 @@ local proxyMirror = "https://mirror.ghproxy.com/"
 >   * 需要：[`onsails/lspkind-nvim`](https://github.com/onsails/lspkind-nvim),[`saadparwaiz1/cmp_luasnip`](https://github.com/saadparwaiz1/cmp_luasnip),[`hrsh7th/cmp-buffer`](https://github.com/hrsh7th/cmp-buffer),[`hrsh7th/cm-nvim-lsp`](https://github.com/hrsh7th/cm-nvim-lsp),[`hrsh7th/cmp-nvim-lua`](https://github.com/hrsh7th/cmp-nvim-lua),[`hrsh7th/cmp-path`](https://github.com/hrsh7th/cmp-path),[`f3fora/cmp-spell`](https://github.com/f3fora/cmp-spell),[`kdheepak/cmp-latex-symbols`](https://github.com/kdheepak/cmp-latex-symbols)
 > - **`nvim-autopairs`**
 >   * 功能：自动配对
->   * 地址：[`windup/nvim-autopairs`](https://github.com/windup/nvim-autopairs)
+>   * 地址：[`windwp/nvim-autopairs`](https://github.com/windwp/nvim-autopairs)
 >   * 需要：`nvim-cmp`
 > - **`nvim_comment`**
 >   * 功能：代码注释

@@ -16,6 +16,8 @@
 --  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ------------------------------------------------------------------------------
 
+local proxyMirror  = require "proxyMirror"
+
 local pluginList = {
     {"neovim/nvim-lspconfig",config = function()
 		--Customizing how diagnostics are displayed
@@ -32,12 +34,19 @@ local pluginList = {
 	-- 	vim.o.updatetime = 250
 	-- 	vim.api.nvim_command "autocmd CursorHold * Lspsaga show_line_diagnostics" 
 	-- end},
-	{"tami5/lspsaga.nvim",after = "nvim-lspconfig",branch = 'nvim6.0', config = function ()
+	{"tami5/lspsaga.nvim",after = "nvim-lspconfig", config = function ()
 		require("lspsaga").init_lsp_saga()
 		--vim.o.updatetime = 500
 		--vim.api.nvim_command "autocmd CursorHold * Lspsaga show_line_diagnostics" 
 	end},
 	{"nvim-treesitter/nvim-treesitter",run = ":TSUpdate",config = function()
+		if proxyMirror.proxyURL then
+			require("nvim-treesitter.install").prefer_git = true
+			local installUrl = proxyMirror.proxyURL .. "https://github.com/"
+			for _, config in pairs(require("nvim-treesitter.parsers").get_parser_configs()) do
+				config.install_info.url = config.install_info.url:gsub("https://github.com/", installUrl)
+			end
+		end
 		require("nvim-treesitter.configs").setup {
 	    	ensure_installed = require("languageConfig").list(),
 	    	textobjects = {
@@ -80,7 +89,7 @@ local pluginList = {
 	    	},
 		}
     end},
-   {"nvim-treesitter/nvim-treesitter-textobjects",after = "nvim-treesitter"},
+	{"nvim-treesitter/nvim-treesitter-textobjects",after = "nvim-treesitter"},
     --{"romgrk/nvim-treesitter-context",after = "nvim-treesitter"},
     {"andymass/vim-matchup",after = "nvim-treesitter"},
     {"kyazdani42/nvim-web-devicons",config = function()
@@ -108,7 +117,15 @@ local pluginList = {
 						always_visible = false,
 		    		},
 		    		{"encoding"},
-					{"fileformat"},
+					{
+						"fileformat",
+						icons_enabled = true,
+						symbols = {
+							unix = 'LF',
+							dos = 'CRLF',
+							mac = 'CR',
+						}
+					},
 		    		{"filetype"}
 				},
 				lualine_y = {"progress"},

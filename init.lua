@@ -21,9 +21,13 @@ local keyMapping = require "keyMapping"
 local pluginPacker = require "pluginPacker"
 local languageConfig = require "languageConfig"
 
+local proxyMirror  = require "proxyMirror"
+
+-- proxyMirror.proxyURL = "https://mirror.ghproxy.com/" -- when running in China
+
 option.setup()
---local proxyMirror = "https://mirror.ghproxy.com/" -- when running in China
-pluginPacker.setup(proxyMirror)
+
+pluginPacker.setup()
 
 languageConfig.setup()
 
