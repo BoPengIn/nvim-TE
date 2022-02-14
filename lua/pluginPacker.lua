@@ -43,40 +43,40 @@ function _M.setup()
 
     if fn.empty(fn.glob(installPath)) > 0 then
 		packerBootstrap = fn.system({'git', 'clone', '--depth', '1', packerUrl, installPath})
+		vim.cmd "packadd packer.nvim"
 	end
 
     local packer = require('packer')
-	if packer then
-		packer.init ({
-			package_root = packageRoot,
-			git = {
-				clone_timeout = 300,
-				default_url_format =  defaultUrlFormat
-			},
-			display = {
-				open_fn = function()
-					return require("packer.util").float({border = "single"})
-				end
-			},
-			auto_clean = true,
-			compile_on_sync = true,
-		})
-	
-		packer.startup(function(use)
-	
-			use 'wbthomason/packer.nvim'
-	
-			if pluginList then
-				for _,plugin in ipairs(pluginList) do
-					use(plugin)
-				end
-			end
-	
-			if packerBootstrap then
-				require('packer').sync()
-			end
-		end)
-	end
+
+    packer.init ({
+		package_root = packageRoot,
+		git = {
+			clone_timeout = 300,
+	    	default_url_format =  defaultUrlFormat
+		},
+		display = {
+	    	open_fn = function()
+				return require("packer.util").float({border = "single"})
+	    	end
+		},
+		auto_clean = true,
+		compile_on_sync = true,
+    })
+
+    packer.startup(function(use)
+
+		use 'wbthomason/packer.nvim'
+
+		if pluginList then
+	    	for _,plugin in ipairs(pluginList) do
+				use(plugin)
+	    	end
+		end
+
+		if packerBootstrap then
+	    	require('packer').sync()
+		end
+    end)
 end
 
 return _M

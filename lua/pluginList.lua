@@ -40,13 +40,13 @@ local pluginList = {
 		--vim.api.nvim_command "autocmd CursorHold * Lspsaga show_line_diagnostics" 
 	end},
 	{"nvim-treesitter/nvim-treesitter",run = ":TSUpdate",config = function()
-		if proxyMirror.proxyURL then
-			require("nvim-treesitter.install").prefer_git = true
-			local installUrl = proxyMirror.proxyURL .. "https://github.com/"
-			for _, config in pairs(require("nvim-treesitter.parsers").get_parser_configs()) do
-				config.install_info.url = config.install_info.url:gsub("https://github.com/", installUrl)
-			end
-		end
+		-- if proxyMirror.proxyURL then
+		-- 	require("nvim-treesitter.install").prefer_git = true
+		-- 	local installUrl = proxyMirror.proxyURL .. "https://github.com/"
+		-- 	for _, config in pairs(require("nvim-treesitter.parsers").get_parser_configs()) do
+		-- 		config.install_info.url = config.install_info.url:gsub("https://github.com/", installUrl)
+		-- 	end
+		-- end
 		require("nvim-treesitter.configs").setup {
 	    	ensure_installed = require("languageConfig").list(),
 	    	textobjects = {
