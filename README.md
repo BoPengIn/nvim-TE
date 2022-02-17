@@ -314,7 +314,7 @@ proxyMirror.proxyURL = "https://mirror.ghproxy.com/"
 >    * 功能：文本对象的选择及移动（支持函数及类方式）
 >    * 地址：[`nvim-treesitter/nvim-treesitter-textobjects`](https://github.com/nvim-treesitter/nvim-treesitter-textobjects)
 >    * 需要：`nvim-treesitter`
-> - **`nvim-treesitter-context`**(暂时废弃`Windows`下有`BUG`)
+> - **`nvim-treesitter-context`**
 >   * 功能：在上下文窗口中，显示正在查看的函数、类、方法
 >   * 地址：[`romgrk/nvim-treesitter-context`](https://github.com/romgrk/nvim-treesitter-context)
 >   * 需要：`nvim-treesitter`

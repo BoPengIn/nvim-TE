@@ -90,7 +90,7 @@ local pluginList = {
 		}
     end},
 	{"nvim-treesitter/nvim-treesitter-textobjects",after = "nvim-treesitter"},
-    --{"romgrk/nvim-treesitter-context",after = "nvim-treesitter"},
+    {"romgrk/nvim-treesitter-context",after = "nvim-treesitter"},
     {"andymass/vim-matchup",after = "nvim-treesitter"},
     {"kyazdani42/nvim-web-devicons",config = function()
 		require("nvim-web-devicons").setup {
