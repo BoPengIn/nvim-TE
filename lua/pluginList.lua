@@ -209,7 +209,7 @@ local pluginList = {
 	    	},
 		}
     end},
-	{"akinsho/bufferline.nvim",after = "nvim-web-devicons",config = function()
+	{"akinsho/bufferline.nvim",tag = "*", after = "nvim-web-devicons",config = function()
 		require("bufferline").setup {
 			options = {
 				numbers = function(opts)
