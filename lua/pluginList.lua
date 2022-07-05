@@ -34,7 +34,7 @@ local pluginList = {
 	-- 	vim.o.updatetime = 250
 	-- 	vim.api.nvim_command "autocmd CursorHold * Lspsaga show_line_diagnostics" 
 	-- end},
-	{"tami5/lspsaga.nvim",after = "nvim-lspconfig", config = function ()
+	{"kkharji/lspsaga.nvim",after = "nvim-lspconfig", config = function ()
 		require("lspsaga").init_lsp_saga()
 		--vim.o.updatetime = 500
 		--vim.api.nvim_command "autocmd CursorHold * Lspsaga show_line_diagnostics" 

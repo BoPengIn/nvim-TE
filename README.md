@@ -305,7 +305,7 @@ proxyMirror.proxyURL = "https://mirror.ghproxy.com/"
 >   * ~~需要：`nvim-lspconfig`~~
 > - **`lspsaga.nvim`**
 >   * 功能：一个轻量级、高性能的的`LSP UI`插件
->   * 地址：[`tami5/lspsaga.nvim`](https://github.com/tami5/lspsaga.nvim)
+>   * 地址：[`kkharji/lspsaga.nvim`](https://github.com/kkharji/lspsaga.nvim)
 >   * 需要：`nvim-lspconfig`
 >  - **`nvim-treesitter`**
 >    * 功能：语法高亮插件
